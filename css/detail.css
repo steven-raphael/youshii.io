@@ -384,14 +384,14 @@ h5 {
   --white: #ffffff;
   --black: #000000;
   --light-gray: #666666;
-  --light-brown: #F5EFE6;
-  --dark-brown: #CCB28C;
-  --dark-blue: #7895B2;
+  --light-brown: #f5efe6;
+  --dark-brown: #ccb28c;
+  --dark-blue: #7895b2;
   --figma-black: #353535;
-  --sketch-yellow: #F5A800;
-  --xd-purple: #490A3A;
-  --ps-blue: #30A8FF;
-  --ai-orange: #FF9A00;
+  --sketch-yellow: #f5a800;
+  --xd-purple: #490a3a;
+  --ps-blue: #30a8ff;
+  --ai-orange: #ff9a00;
   /* color RGB include example rgba(var(--black-rgb), 0.5) */
   --white-rgb: 255, 255, 255;
   --black-rgb: 0, 0, 0;
@@ -408,7 +408,7 @@ h5 {
 
 body {
   background: var(--light-brown);
-  font-family: 'Noto Sans TC';
+  font-family: "Noto Sans TC";
   color: var(--light-gray);
   overflow-x: hidden;
   overflow-y: scroll;
@@ -470,7 +470,7 @@ body[data-loading="false"] .portfolio .experience,
 body[data-loading="false"] .portfolio .hand-project,
 body[data-loading="false"] .portfolio .clients,
 body[data-loading="false"] .portfolio .project {
-  animation: .5s clip-right-to-left ease-in forwards;
+  animation: 0.5s clip-right-to-left ease-in forwards;
 }
 
 body[data-loading="false"] .portfolio .navigation,
@@ -479,23 +479,23 @@ body[data-loading="false"] .portfolio .skill,
 body[data-loading="false"] .portfolio .about,
 body[data-loading="false"] .portfolio .data .role .item, .data .role
 body[data-loading="false"] .portfolio .item {
-  animation: .5s clip-left-to-right ease-in forwards;
+  animation: 0.5s clip-left-to-right ease-in forwards;
 }
 
 body[data-loading="false"] .portfolio .sticker img {
-  animation: .5s clip-path-youshii-revert ease-in forwards;
+  animation: 0.5s clip-path-youshii-revert ease-in forwards;
 }
 
 body[data-loading="false"] .portfolio .sticker::before {
-  animation: .5s loading-opacity-revert ease-in forwards;
+  animation: 0.5s loading-opacity-revert ease-in forwards;
 }
 
 body[data-loading="false"] .intro {
-  animation: .5s clip-path-youshii-revert ease-in forwards;
+  animation: 0.5s clip-path-youshii-revert ease-in forwards;
 }
 
 body[data-transform="true"] {
-  animation: .5s launch-screen ease-in forwards;
+  animation: 0.5s launch-screen ease-in forwards;
   overflow: hidden;
 }
 
@@ -526,7 +526,7 @@ body[data-theme="dark"] .intro .navigation .top-btn {
 }
 
 body[data-theme="dark"] .intro .navigation .top-btn:hover {
-  color: #7895B2;
+  color: #7895b2;
 }
 
 body[data-theme="dark"] .intro .scroll-bar {
@@ -684,13 +684,13 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   justify-content: center;
   background: var(--dark-blue);
   border: none;
-  opacity: .8;
+  opacity: 0.8;
   transform: scale(5);
 }
 
 .is-visual-anchor::before, .is-link-anchor::before, .is-back-anchor::before, .is-next-anchor::before {
   content: "\e900";
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   color: var(--white);
   font-size: 0.875rem;
   transform: rotate(90deg);
@@ -957,7 +957,7 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 @media (max-width: 1200px) {
   .intro .navigation {
     font-size: 1.125rem;
-    gap: .375rem;
+    gap: 0.375rem;
   }
 }
 
@@ -1081,7 +1081,7 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 }
 
 .white-bg {
-  animation: .8s white-bg ease-in forwards;
+  animation: 0.8s white-bg ease-in forwards;
 }
 
 .data {
@@ -1169,12 +1169,12 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 
 .data .role {
   display: grid;
-  gap: .75rem;
+  gap: 0.75rem;
 }
 
 @media (max-width: 1200px) {
   .data .role {
-    gap: .375rem;
+    gap: 0.375rem;
   }
 }
 
@@ -1188,7 +1188,7 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 .process .step {
   position: sticky;
   top: 24px;
-  padding: .75rem;
+  padding: 0.75rem;
 }
 
 @media only screen and (max-width: 834px) and (orientation: portrait) {
@@ -1247,18 +1247,18 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 
 .process .step .list {
   display: grid;
-  gap: .75rem;
+  gap: 0.75rem;
   place-items: center;
 }
 
 .process .step .list .item {
   width: 100%;
   border: 1px solid var(--dark-blue);
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   color: var(--dark-blue);
   cursor: pointer;
   text-align: center;
-  padding: .75rem;
+  padding: 0.75rem;
   transition: all 0.2s ease;
 }
 
@@ -1276,7 +1276,7 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
   display: grid;
   gap: 1.5rem;
   border-left: 1px solid var(--dark-blue);
-  padding: .75rem;
+  padding: 0.75rem;
 }
 
 @media only screen and (max-width: 834px) and (orientation: portrait) {
@@ -1296,7 +1296,7 @@ body[data-theme="dark"] .design-guideline .card img, body[data-theme="dark"] .mo
 .process .content .item {
   display: flex;
   flex-direction: column;
-  gap: .75rem;
+  gap: 0.75rem;
   height: 100vh;
 }
 

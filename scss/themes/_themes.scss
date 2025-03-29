@@ -1,181 +1,175 @@
 :root {
-    /* color HEX */
-    --white: #ffffff;
-    --black: #000000;
-    --light-gray: #666666;
-    --light-brown: #F5EFE6;
-    --dark-brown: #CCB28C;
-    --dark-blue: #7895B2;
-    --figma-black: #353535;
-    --sketch-yellow: #F5A800;
-    --xd-purple: #490A3A;
-    --ps-blue: #30A8FF;
-    --ai-orange: #FF9A00;
+  /* color HEX */
+  --white: #ffffff;
+  --black: #000000;
+  --light-gray: #666666;
+  --light-brown: #f5efe6;
+  --dark-brown: #ccb28c;
+  --dark-blue: #7895b2;
+  --figma-black: #353535;
+  --sketch-yellow: #f5a800;
+  --xd-purple: #490a3a;
+  --ps-blue: #30a8ff;
+  --ai-orange: #ff9a00;
 
-    /* color RGB include example #{'rgba(var(--black-rgb), 0.5)'} */
-    --white-rgb: 255, 255, 255;
-    --black-rgb: 0, 0, 0;
-    --light-gray-rgb: 102, 102, 102;
-    --light-brown-rgb: 245, 239, 230;
-    --dark-brown-rgb: 204, 178, 140;
-    --dark-blue-rgb: 120, 149, 178;
-    --figma-black-rgb: 53, 53, 53;
-    --sketch-yellow-rgb: 245, 168, 0;
-    --xd-purple-rgb: 73, 10, 58;
-    --ps-blue-rgb: 48, 168, 255;
-    --ai-orange-rgb: 255, 154, 0;
+  /* color RGB include example #{'rgba(var(--black-rgb), 0.5)'} */
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
+  --light-gray-rgb: 102, 102, 102;
+  --light-brown-rgb: 245, 239, 230;
+  --dark-brown-rgb: 204, 178, 140;
+  --dark-blue-rgb: 120, 149, 178;
+  --figma-black-rgb: 53, 53, 53;
+  --sketch-yellow-rgb: 245, 168, 0;
+  --xd-purple-rgb: 73, 10, 58;
+  --ps-blue-rgb: 48, 168, 255;
+  --ai-orange-rgb: 255, 154, 0;
 }
 
-
 body {
-    background: var(--light-brown);
-    font-family: 'Noto Sans TC';
-    color: var(--light-gray);
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    @include mac-scrollbar-style();
+  background: var(--light-brown);
+  font-family: "Noto Sans TC";
+  color: var(--light-gray);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  @include mac-scrollbar-style();
 
-    &[data-loading="true"] {
+  &[data-loading="true"] {
+    .portfolio {
+      .navigation,
+      .contact,
+      .experience,
+      .hand-project,
+      .clients,
+      .information,
+      .skill,
+      .project,
+      .about {
+        display: none;
+      }
 
-        .portfolio {
-
-            .navigation,
-            .contact,
-            .experience,
-            .hand-project,
-            .clients,
-            .information,
-            .skill,
-            .project,
-            .about {
-                display: none;
-            }
-
-            .sticker {
-                img {
-                    display: none;
-                }
-
-                &::before {
-                    display: none;
-                }
-            }
+      .sticker {
+        img {
+          display: none;
         }
 
-        .web,
-        .app,
-        .visual,
-        .intro,
-        .detail,
-        .cursor {
-            display: none;
+        &::before {
+          display: none;
         }
+      }
     }
 
-    &[data-loading="false"] {
+    .web,
+    .app,
+    .visual,
+    .intro,
+    .detail,
+    .cursor {
+      display: none;
+    }
+  }
 
-        .portfolio {
+  &[data-loading="false"] {
+    .portfolio {
+      .contact,
+      .experience,
+      .hand-project,
+      .clients,
+      .project {
+        animation: 0.5s clip-right-to-left ease-in forwards;
+      }
 
-            .contact,
-            .experience,
-            .hand-project,
-            .clients,
-            .project {
-                animation: .5s clip-right-to-left ease-in forwards;
-            }
+      .navigation,
+      .information,
+      .skill,
+      .about {
+        animation: 0.5s clip-left-to-right ease-in forwards;
+      }
 
-            .navigation,
-            .information,
-            .skill,
-            .about {
-                animation: .5s clip-left-to-right ease-in forwards;
-            }
-
-            .sticker {
-                img {
-                    animation: .5s clip-path-youshii-revert ease-in forwards;
-                }
-
-                &::before {
-                    animation: .5s loading-opacity-revert ease-in forwards;
-                }
-            }
+      .sticker {
+        img {
+          animation: 0.5s clip-path-youshii-revert ease-in forwards;
         }
 
-        .intro {
-            animation: .5s clip-path-youshii-revert ease-in forwards;
+        &::before {
+          animation: 0.5s loading-opacity-revert ease-in forwards;
         }
+      }
     }
 
-    &[data-transform="true"] {
-        animation: .5s launch-screen ease-in forwards;
-        overflow: hidden;
+    .intro {
+      animation: 0.5s clip-path-youshii-revert ease-in forwards;
+    }
+  }
+
+  &[data-transform="true"] {
+    animation: 0.5s launch-screen ease-in forwards;
+    overflow: hidden;
+  }
+
+  &[data-theme="dark"] {
+    /* color HEX */
+    --white: #000000;
+    --black: #ffffff;
+    --light-gray: #ffffff;
+    --light-brown: #000000;
+    --dark-brown: #000000;
+    --dark-blue: #ffffff;
+
+    /* color RGB include example #{'rgba(var(--black-rgb), 0.5)'} */
+    --white-rgb: 0, 0, 0;
+    --black-rgb: 255, 255, 255;
+    --light-gray-rgb: 255, 255, 255;
+    --light-brown-rgb: 0, 0, 0;
+    --dark-brown-rgb: 0, 0, 0;
+    --dark-blue-rgb: 255, 255, 255;
+
+    .dark-brown-bg,
+    .black-bg {
+      animation: unset;
     }
 
-    &[data-theme="dark"] {
-        /* color HEX */
-        --white: #000000;
-        --black: #ffffff;
-        --light-gray: #ffffff;
-        --light-brown: #000000;
-        --dark-brown: #000000;
-        --dark-blue: #ffffff;
+    .intro {
+      .navigation {
+        .top-btn {
+          color: #ffffff;
 
-        /* color RGB include example #{'rgba(var(--black-rgb), 0.5)'} */
-        --white-rgb: 0, 0, 0;
-        --black-rgb: 255, 255, 255;
-        --light-gray-rgb: 255, 255, 255;
-        --light-brown-rgb: 0, 0, 0;
-        --dark-brown-rgb: 0, 0, 0;
-        --dark-blue-rgb: 255, 255, 255;
-
-        .dark-brown-bg,
-        .black-bg {
-            animation: unset;
+          &:hover {
+            color: #7895b2;
+          }
         }
+      }
 
-        .intro {
-            .navigation {
+      .scroll-bar {
+        background: #ffffff;
 
-                .top-btn {
-                    color: #ffffff;
-
-                    &:hover {
-                        color: #7895B2;
-                    }
-                }
-            }
-
-            .scroll-bar {
-                background: #ffffff;
-
-                &::after {
-                    background: #000000;
-                }
-            }
-
-            .next-btn {
-                color: #ffffff;
-            }
+        &::after {
+          background: #000000;
         }
+      }
 
-        .process {
-            .content {
-                .item {
-                    img {
-                        background: #ffffff;
-                    }
-                }
-            }
-        }
-
-        .design-guideline {
-            .card {
-                img {
-                    background: #ffffff;
-                }
-            }
-        }
+      .next-btn {
+        color: #ffffff;
+      }
     }
+
+    .process {
+      .content {
+        .item {
+          img {
+            background: #ffffff;
+          }
+        }
+      }
+    }
+
+    .design-guideline {
+      .card {
+        img {
+          background: #ffffff;
+        }
+      }
+    }
+  }
 }
